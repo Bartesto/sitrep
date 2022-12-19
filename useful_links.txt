@@ -1,0 +1,13 @@
+https://warin.ca/dpr/dashboards.html#introduction-10
+
+https://www.paulamoraga.com/book-geospatial/sec-flexdashboard.html
+
+https://bookdown.org/yihui/rmarkdown/layout.html
+
+
+** worked example
+words
+https://towardsdatascience.com/building-an-hr-dashboard-in-r-using-flexdashboard-76d14ed3f32
+data and rmd's
+https://github.com/sagarkulkarny/HR-Movement-Dashboard-using-Flexdashboard-
+

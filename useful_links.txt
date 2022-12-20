@@ -11,3 +11,13 @@ https://towardsdatascience.com/building-an-hr-dashboard-in-r-using-flexdashboard
 data and rmd's
 https://github.com/sagarkulkarny/HR-Movement-Dashboard-using-Flexdashboard-
 
+packages
+fontawesome
+bslib
+flexdashboard
+rmarkdown
+ggplot2
+plotly
+tidyverse
+
+

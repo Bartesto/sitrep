@@ -1,8 +1,12 @@
 ---
 title: "Mia's big report"
 author: "Mia Huntley"
-output: 
+output:
   flexdashboard::flex_dashboard:
+  html_document:
+    theme:
+      version: 4
+      bootswatch: solar
     orientation: rows
     vertical_layout: fill
     runtime: shiny
@@ -18,6 +22,8 @@ library(plotly)
 library(ggmap)
 
 # devtools::install_github('rstudio/rmarkdown@3953abd473e9230faca4dcad996d5d1b35c3b3a7')
+
+thematic::thematic_rmd(font = "auto")
 
 #Use knitr root.dir instead of setwd to set directory
 #It is not working

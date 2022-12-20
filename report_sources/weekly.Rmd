@@ -1,0 +1,61 @@
+---
+title: "Weekly Report"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+author: "by Mia Huntley"
+output: 
+  flexdashboard::flex_dashboard:
+    theme:
+      version: 4
+      bootswatch: solar
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r, include= TRUE}
+# htmltools::tagList(fontawesome::fa_html_dependency())
+```
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(plotly)
+library(thematic)
+library(fontawesome)
+thematic::thematic_rmd()
+dat <- readr::read_csv("../data/clean/titanic.csv", show_col_types = FALSE)
+```
+
+Overview {data-icon="fa-compass"}
+==========================================
+Row {data-width=100}
+------------------------------------------
+### Total Aboard
+```{r}
+tot <- dat |>
+  summarise(tot = n()) |>
+  pull()
+valueBox(value = tot, caption = "Total Aboard", icon = "fas fa-users", color = "primary")
+```
+
+### Adults
+```{r}
+adults <- dat |>
+  filter(Age > 18) |>
+  summarise(adults = n()) |>
+  pull()
+valueBox(value = adults, caption = "Adults", icon = "fas fa-user", color = "success")
+```
+
+### Kids
+```{r}
+kids <- dat |>
+  filter(Age <= 18) |>
+  summarise(kids = n()) |>
+  pull()
+valueBox(value = kids, caption = "Children", icon = "fas fa-child", color = "info")
+```
+
+Row
+----------------------------------------
